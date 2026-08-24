@@ -92,16 +92,24 @@ footer .tel{color:#C6CBDA;font-size:14px;font-weight:700}
 <section class="wrap"><h2>店舗一覧</h2><div class="sis"><a href="../wavy/"><span class="sn">Bar WAVY 蒲田店</span><br><span class="sa">蒲田 / 21:00 〜 翌8:00 / JR蒲田駅 西口 徒歩6分</span></a><a href="../3rd/"><span class="sn">1000円 Bar 3rd</span><br><span class="sa">蒲田 / 20:00 〜 翌8:00 / JR蒲田駅 東口 徒歩1分</span></a><a href="../aday/"><span class="sn">Bar A Day 川崎店</span><br><span class="sa">川崎 / 20:00 〜 翌8:00 / JR川崎駅 東口 徒歩5分</span></a><a href="../noct/"><span class="sn">Bar NOCT 大森店</span><br><span class="sa">大森 / 19:00 〜 LAST / JR大森駅 東口 徒歩5分</span></a></div></section>
 
 <section class="wrap"><h2>応募フォーム</h2><div class="rsv" style="text-align:left">
-  <p style="text-align:center">送信すると担当者にそのまま届きます。折り返しご連絡します。</p>
+  <p style="text-align:center">30秒で送れます。送信すると担当者にそのまま届き、折り返しご連絡します。</p>
   <form action="https://script.google.com/macros/s/AKfycbwTNHbh5pM1J2sUxRil8hOyoh3VdpA-0BzvEhYeWlPGQbQexwvV7e8ocP7dEvEDourbXw/exec" method="GET" target="rcr_frame" id="rcrf">
     <input type="hidden" name="recruit" value="rcr_wavy_20260824">
     <input type="text" name="hp" style="position:absolute;left:-5000px" tabindex="-1" autocomplete="off">
     <label class="fl">お名前<input class="fi" type="text" name="name" required maxlength="40"></label>
+    <div style="display:flex;gap:10px">
+      <label class="fl" style="flex:1">年齢<input class="fi" type="number" name="age" min="18" max="99" required placeholder="21"></label>
+      <label class="fl" style="flex:1">性別<select class="fi" name="sex" required><option value="">選択してください</option><option>男性</option><option>女性</option><option>その他・回答しない</option></select></label>
+    </div>
     <label class="fl">電話番号<input class="fi" type="tel" name="tel" required maxlength="20" placeholder="090-0000-0000"></label>
-    <label class="fl">希望店舗<select class="fi" name="store"><option>どこでもOK</option><option>Bar WAVY 蒲田店</option><option>1000円 Bar 3rd(蒲田)</option><option>Bar A Day 川崎店</option><option>Bar NOCT 大森店</option></select></label>
-    <label class="fl">面接希望日(任意)<input class="fi" type="text" name="idate" maxlength="60" placeholder="例: 8/30の20時ごろ / 平日の夜ならいつでも"></label>
     <label class="fl">メールアドレス<input class="fi" type="email" name="mail" required maxlength="60" placeholder="renraku@example.com"></label>
-    <label class="fl">ひとこと(任意)<textarea class="fi" name="msg" rows="3" maxlength="300" placeholder="例: 週2日くらいで働きたいです"></textarea></label>
+    <label class="fl">希望店舗<select class="fi" name="store"><option>どこでもOK</option><option>Bar WAVY 蒲田店</option><option>1000円 Bar 3rd(蒲田)</option><option>Bar A Day 川崎店</option><option>Bar NOCT 大森店</option></select></label>
+    <div style="display:flex;gap:10px">
+      <label class="fl" style="flex:1">週にどのくらい?<select class="fi" name="freq"><option>未定</option><option>週1〜2日</option><option>週3〜4日</option><option>週5日以上</option></select></label>
+      <label class="fl" style="flex:1">経験<select class="fi" name="exp"><option value="">未選択でOK</option><option>未経験</option><option>飲食・ナイトワーク経験あり</option></select></label>
+    </div>
+    <label class="fl">面接希望日(任意)<input class="fi" type="text" name="idate" maxlength="60" placeholder="例: 8/30の20時ごろ / 平日の夜ならいつでも"></label>
+    <label class="fl">質問など(空欄でOK)<textarea class="fi" name="msg" rows="2" maxlength="300" placeholder="何か質問があればどうぞ"></textarea></label>
     <button class="btn primary" type="submit" style="width:100%;border:0;cursor:pointer;font-size:16px">応募する</button>
   </form>
   <div id="rcr_done" style="display:none;text-align:center;padding:18px 0"><b>送信されました!</b><br>折り返しご連絡しますので少々お待ちください。</div>
