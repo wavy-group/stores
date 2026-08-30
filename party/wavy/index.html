@@ -74,7 +74,7 @@ h2{font-size:14px;letter-spacing:.22em;color:#C9A961;font-weight:800;margin-bott
 .camp .pd{font-size:12px;color:#A8A08C;margin-top:10px;border-top:1px solid #3A3423;padding-top:8px}
 footer{padding:36px 0 44px;text-align:center;color:#6B7288;font-size:12px}
 footer .tel{color:#C6CBDA;font-size:14px;font-weight:700}
-.ptb{width:100%;border-collapse:collapse;margin:10px 0 4px}.ptb th,.ptb td{padding:11px 8px;border-bottom:1px solid #262B3C;text-align:left;font-size:15px}.ptb th{color:#8B92A6;font-weight:600;font-size:12.5px}.ptb .pr{font-weight:700;color:#EDEFF4;font-size:16px}.ptb .pp{color:#C9A961;font-size:13px}.pcard{display:block;background:#141824;border:1px solid #262B3C;border-radius:14px;overflow:hidden;margin-bottom:14px;text-decoration:none;color:#EDEFF4}.pcard img{width:100%;height:170px;object-fit:cover;display:block}.pcard .pb{padding:12px 16px}.pcard .pn{font-weight:700;font-size:16px}.pcard .pi{color:#C9A961;font-size:13.5px;margin-top:3px}.pcard .pa{color:#8B92A6;font-size:12.5px;margin-top:3px}</style>
+.ptb{width:100%;border-collapse:collapse;margin:10px 0 4px}.ptb th,.ptb td{padding:11px 8px;border-bottom:1px solid #262B3C;text-align:left;font-size:15px}.ptb th{color:#8B92A6;font-weight:600;font-size:12.5px}.ptb .pr{font-weight:700;color:#EDEFF4;font-size:16px}.ptb .pp{color:#C9A961;font-size:13px}.pcard{display:block;background:#141824;border:1px solid #262B3C;border-radius:14px;overflow:hidden;margin-bottom:14px;text-decoration:none;color:#EDEFF4}.pcard img{width:100%;height:170px;object-fit:cover;display:block}.pcard .pb{padding:12px 16px}.pcard .pn{font-weight:700;font-size:16px}.pcard .pi{color:#C9A961;font-size:13.5px;margin-top:3px}.pcard .pa{color:#8B92A6;font-size:12.5px;margin-top:3px}.fl{display:block;font-size:13px;color:#C6CBDA;margin-bottom:12px}.fi{display:block;width:100%;margin-top:6px;background:#0F1119;border:1px solid #2A3044;border-radius:10px;padding:12px;color:#EDEFF4;font-size:15px;font-family:inherit}</style>
 </head>
 <body>
 <div class="hero">
@@ -91,12 +91,35 @@ footer .tel{color:#C6CBDA;font-size:14px;font-weight:700}
 <p class="note">10名まで お一人4,500円、11名からは1名ごと+4,000円(最大18名)</p></section>
 <section class="wrap"><h2>込みのもの</h2><div class="chips"><span class="chip">アルコール&amp;ソフドリ飲み放題込み</span><span class="chip">カラオケ歌い放題</span><span class="chip">持ち込み自由(ケーキOK)</span><span class="chip">1人1時間あたり1,500円以下</span><span class="chip">ダーツは1プレイ100円</span></div></section>
 
+<section class="wrap"><h2>仮予約フォーム</h2><div class="rsv" style="text-align:left">
+  <p style="text-align:center">30秒で送れます。お店から折り返しご連絡し、<b>前払いで予約確定</b>となります。<br>お急ぎの方は下のお電話でどうぞ。</p>
+  <form action="https://script.google.com/macros/s/AKfycbwTNHbh5pM1J2sUxRil8hOyoh3VdpA-0BzvEhYeWlPGQbQexwvV7e8ocP7dEvEDourbXw/exec" method="GET" target="rsv_frame" id="rsvf">
+    <input type="hidden" name="rsv" value="rsv_wavy_20260831_g7">
+    <input type="hidden" name="store" value="Bar WAVY 蒲田店">
+    <input type="hidden" name="kind" value="仮予約">
+    <input type="text" name="hp" style="position:absolute;left:-5000px" tabindex="-1" autocomplete="off">
+    <div style="display:flex;gap:10px">
+      <label class="fl" style="flex:1.3">ご利用日<input class="fi" type="date" name="date" required></label>
+      <label class="fl" style="flex:1">開始時間<input class="fi" type="text" name="time" required maxlength="12" placeholder="15:00ごろ"></label>
+    </div>
+    <label class="fl">人数<input class="fi" type="number" name="num" min="1" max="40" required placeholder="10"></label>
+    <label class="fl">お名前<input class="fi" type="text" name="name" required maxlength="40"></label>
+    <label class="fl">電話番号(折り返しのご連絡用)<input class="fi" type="tel" name="tel" required maxlength="20" placeholder="090-0000-0000"></label>
+    <label class="fl">ご要望など(空欄でOK)<textarea class="fi" name="msg" rows="2" maxlength="300" placeholder="誕生日サプライズをしたい など"></textarea></label>
+    <button class="btn primary" type="submit" style="width:100%;border:0;cursor:pointer;font-size:16px">仮予約を送る</button>
+  </form>
+  <div id="rsv_done" style="display:none;text-align:center;padding:18px 0"><b>受付しました!</b><br>お店からご連絡しますので少々お待ちください。</div>
+  <iframe name="rsv_frame" style="display:none"></iframe>
+</div></section>
+<script>document.getElementById('rsvf').addEventListener('submit',function(){var f=this;setTimeout(function(){f.style.display='none';document.getElementById('rsv_done').style.display='block';},400);});</script>
+
+
 <section class="wrap"><h2>お時間について</h2><div class="rsv">
   <div class="t">貸切のご利用は 13:00〜20:00(3時間から)</div>
   <p>この時間内なら昼でも夕方でも同じ料金です。<br><b>20:00を超えるご利用はお電話でご相談ください。</b></p>
 </div></section>
 <section class="wrap"><h2>ご予約の流れ</h2><div class="rsv" style="text-align:left">
-<p>① お電話で日にち・人数・時間をご相談(<b>3日前まで</b>)<br>
+<p>① 仮予約フォームかお電話で日にち・人数をご連絡(<b>3日前まで</b>)<br>
 ② 料金をその場でご案内します<br>
 ③ <b>前払い(お振込みまたは店頭)</b>で予約確定です<br>
 ④ 当日は手ぶらでOK。ケーキやお菓子の持ち込みも自由です</p>
