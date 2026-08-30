@@ -77,6 +77,7 @@ footer .tel{color:#C6CBDA;font-size:14px;font-weight:700}
 .ptb{width:100%;border-collapse:collapse;margin:10px 0 4px}.ptb th,.ptb td{padding:11px 8px;border-bottom:1px solid #262B3C;text-align:left;font-size:15px}.ptb th{color:#8B92A6;font-weight:600;font-size:12.5px}.ptb .pr{font-weight:700;color:#EDEFF4;font-size:16px}.ptb .pp{color:#C9A961;font-size:13px}.pcard{display:block;background:#141824;border:1px solid #262B3C;border-radius:14px;overflow:hidden;margin-bottom:14px;text-decoration:none;color:#EDEFF4}.pcard img{width:100%;height:170px;object-fit:cover;display:block}.pcard .pb{padding:12px 16px}.pcard .pn{font-weight:700;font-size:16px}.pcard .pi{color:#C9A961;font-size:13.5px;margin-top:3px}.pcard .pa{color:#8B92A6;font-size:12.5px;margin-top:3px}.fl{display:block;font-size:13px;color:#C6CBDA;margin-bottom:12px}.fi{display:block;width:100%;margin-top:6px;background:#0F1119;border:1px solid #2A3044;border-radius:10px;padding:12px;color:#EDEFF4;font-size:15px;font-family:inherit}</style>
 </head>
 <body>
+<div style="background:#0A0C12;border-bottom:1px solid #232838"><div style="max-width:560px;margin:0 auto;padding:10px 18px"><a href="https://wavy-group.github.io/stores/" style="color:#C9A961;font-size:13px;font-weight:700;text-decoration:none">◂ WAVYグループ TOP</a></div></div>
 <div class="hero">
   <div class="wrap">
     <div class="area">PARTY / 蒲田</div>
@@ -98,13 +99,20 @@ footer .tel{color:#C6CBDA;font-size:14px;font-weight:700}
     <input type="hidden" name="store" value="1000円 Bar 3rd">
     <input type="hidden" name="kind" value="仮予約">
     <input type="text" name="hp" style="position:absolute;left:-5000px" tabindex="-1" autocomplete="off">
-    <div style="display:flex;gap:10px">
-      <label class="fl" style="flex:1.3">ご利用日<input class="fi" type="date" name="date" required></label>
-      <label class="fl" style="flex:1">開始時間<input class="fi" type="text" name="time" required maxlength="12" placeholder="15:00ごろ"></label>
-    </div>
+    <label class="fl">ご利用日<input class="fi" type="date" name="date" required></label>
+    <label class="fl">お時間(3時間)<select class="fi" name="time" required>
+      <option value="">選択してください</option>
+      <option>13:00〜16:00</option>
+      <option>14:00〜17:00</option>
+      <option>15:00〜18:00</option>
+      <option>16:00〜19:00</option>
+      <option>17:00〜20:00</option>
+      <option>その他・延長したい(ご要望欄へ)</option>
+    </select></label>
     <label class="fl">人数<input class="fi" type="number" name="num" min="1" max="40" required placeholder="10"></label>
     <label class="fl">お名前<input class="fi" type="text" name="name" required maxlength="40"></label>
-    <label class="fl">電話番号(折り返しのご連絡用)<input class="fi" type="tel" name="tel" required maxlength="20" placeholder="090-0000-0000"></label>
+    <label class="fl">電話番号(必須・折り返しのご連絡用)<input class="fi" type="tel" name="tel" required maxlength="14" pattern="[0-9+() -]{10,14}" title="ハイフンなしでもOK。数字10桁以上で入力してください" inputmode="tel" placeholder="09000000000"></label>
+    <label class="fl">メールアドレス(任意)<input class="fi" type="email" name="mail" maxlength="60" placeholder="renraku@example.com"></label>
     <label class="fl">ご要望など(空欄でOK)<textarea class="fi" name="msg" rows="2" maxlength="300" placeholder="誕生日サプライズをしたい など"></textarea></label>
     <button class="btn primary" type="submit" style="width:100%;border:0;cursor:pointer;font-size:16px">仮予約を送る</button>
   </form>
