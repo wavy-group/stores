@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ご予約・貸切のご相談|株式会社WAVY(蒲田・川崎・大森のカラオケバー4店舗)</title>
+<meta name="description" content="蒲田・川崎・大森のカラオケバー4店舗の団体予約・貸切・営業時間外利用の受付ページ。24時間Webで受付、お店から折り返しご連絡します。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI",sans-serif;
+  background:#0D0F14;color:#EDEFF4;line-height:1.7}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:560px;margin:0 auto;padding:0 18px}
+.hero{position:relative;padding:64px 0 44px;text-align:center;overflow:hidden;
+  background:radial-gradient(ellipse 120% 90% at 50% -10%, #8A6F35AA 0%, #12141C 55%, #0D0F14 100%)}
+.hero .area{letter-spacing:.35em;font-size:12px;color:#C9A961;font-weight:700;text-transform:uppercase}
+.hero h1{font-size:30px;margin:10px 0 8px;color:#fff;letter-spacing:.02em}
+.hero .tag{font-size:14px;color:#B9BFCF}
+.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:18px 0 0}
+.badge{border:1px solid #C9A96166;color:#E7E9F2;background:#C9A9611A;
+  padding:5px 14px;border-radius:999px;font-size:12.5px}
+.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0 0}
+.btn{display:inline-block;padding:12px 22px;border-radius:12px;font-weight:700;font-size:15px}
+.btn.primary{background:linear-gradient(135deg,#C9A961,#8A6F35);color:#fff}
+.btn.ghost{border:1.5px solid #3A4156;color:#D9DDE8}
+section{padding:34px 0 6px}
+h2{font-size:14px;letter-spacing:.22em;color:#C9A961;font-weight:800;margin-bottom:16px}
+.intro{font-size:14.5px;color:#C6CBDA}
+.price{background:#151823;border:1px solid #232838;border-radius:14px;padding:16px;margin-bottom:10px;
+  display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.price .l{font-size:14.5px;color:#D9DDE8;font-weight:600}
+.price .v{font-size:22px;font-weight:800;color:#C9A961}
+.price .n{width:100%;font-size:12px;color:#8B92A6}
+.note{font-size:12px;color:#8B92A6;margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:#1A1E2B;border:1px solid #262C3F;padding:7px 14px;border-radius:999px;font-size:13px;color:#C6CBDA}
+.rate{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.rate .stars{color:#FFC83D;font-size:16px;letter-spacing:2px}
+.rate .num{font-size:20px;font-weight:800;color:#fff}
+.rate .cnt{font-size:12.5px;color:#8B92A6}
+.voice{background:#151823;border:1px solid #232838;border-left:3px solid #C9A961;
+  border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.voice p{font-size:14px;color:#D9DDE8}
+.voice .src{font-size:11.5px;color:#8B92A6;margin-top:6px}
+.rsv{background:linear-gradient(135deg,#8A6F352,#151823 70%);border:1px solid #C9A96155;
+  border-radius:16px;padding:20px 18px;text-align:center}
+.rsv .t{font-size:16px;font-weight:800;color:#fff;margin-bottom:6px}
+.rsv p{font-size:13.5px;color:#C6CBDA;margin-bottom:14px}
+.rsv .btn{width:100%;font-size:17px;padding:15px}
+.rsv .small{font-size:11.5px;color:#8B92A6;margin-top:10px}
+.hours{background:#151823;border:1px solid #232838;border-radius:14px;overflow:hidden}
+.hours .row{display:flex;justify-content:space-between;padding:13px 16px;border-bottom:1px solid #232838;font-size:14.5px}
+.hours .row:last-child{border-bottom:none}
+.hours .d{color:#9AA1B5}.hours .t{font-weight:700;color:#EDEFF4}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gal img{border-radius:10px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.gal img.wide{grid-column:1/-1;aspect-ratio:16/9}
+.map{border-radius:14px;overflow:hidden;border:1px solid #232838}
+.map iframe{width:100%;height:280px;border:0;display:block;filter:grayscale(.15)}
+.access p{font-size:14px;color:#C6CBDA;margin-top:10px}
+.sis{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sis a{background:#151823;border:1px solid #232838;border-radius:12px;padding:14px;display:block}
+.sis .sn{font-weight:700;font-size:14px;color:#EDEFF4}
+.sis .sa{font-size:12px;color:#8B92A6;margin-top:2px}
+.camp{margin:22px auto 14px;background:linear-gradient(135deg,#2A2310,#151823 65%);border:1.5px solid #C9A961;
+  border-radius:16px;padding:18px 18px 16px;position:relative}
+.camp .lb{display:inline-block;background:#C9A961;color:#1A1406;font-weight:800;font-size:11.5px;
+  letter-spacing:.12em;padding:4px 12px;border-radius:999px;margin-bottom:10px}
+.camp .ct{font-size:21px;font-weight:800;color:#fff;line-height:1.35;margin-bottom:10px}
+.camp ul{list-style:none}
+.camp li{font-size:13.5px;color:#E2D9C3;padding:4px 0 4px 18px;position:relative}
+.camp li:before{content:"◆";position:absolute;left:0;top:4px;color:#C9A961;font-size:10px}
+.camp .pd{font-size:12px;color:#A8A08C;margin-top:10px;border-top:1px solid #3A3423;padding-top:8px}
+footer{padding:36px 0 44px;text-align:center;color:#6B7288;font-size:12px}
+footer .tel{color:#C6CBDA;font-size:14px;font-weight:700}
+.fl{display:block;font-size:13px;color:#C6CBDA;margin-bottom:12px}.fi{display:block;width:100%;margin-top:6px;background:#0F1119;border:1px solid #2A3044;border-radius:10px;padding:12px;color:#EDEFF4;font-size:15px;font-family:inherit}</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <div class="area">RESERVE / ご予約</div>
+    <h1>ご予約・貸切のご相談</h1>
+    <div class="tag">団体・貸切・営業時間外のご利用はこちらから</div>
+    <div class="badges"><span class="badge">24時間受付・お店から折り返します</span></div>
+  </div>
+</div>
+<section class="wrap"><h2>こんなときに</h2><div class="chips"><span class="chip">歓送迎会・二次会</span><span class="chip">誕生日・記念日</span><span class="chip">貸切パーティー</span><span class="chip">昼・夕方の利用もご相談OK</span><span class="chip">24時間Web受付</span></div>
+<p class="note">通常のご来店(少人数)はご予約不要です。そのままお越しください。</p></section>
+
+<section class="wrap"><h2>予約リクエスト</h2><div class="rsv" style="text-align:left">
+  <p style="text-align:center">30秒で送れます。送信内容がそのまま店に届き、<b>確認のお電話</b>をしてご予約確定となります。</p>
+  <form action="https://script.google.com/macros/s/AKfycbwTNHbh5pM1J2sUxRil8hOyoh3VdpA-0BzvEhYeWlPGQbQexwvV7e8ocP7dEvEDourbXw/exec" method="GET" target="rsv_frame" id="rsvf">
+    <input type="hidden" name="rsv" value="rsv_wavy_20260831_g7">
+    <input type="text" name="hp" style="position:absolute;left:-5000px" tabindex="-1" autocomplete="off">
+    <label class="fl">ご希望の内容<select class="fi" name="kind"><option>団体(5名以上)</option><option>営業時間外の利用(昼・夕方など)</option><option>貸切</option><option>その他の相談</option></select></label>
+    <label class="fl">店舗<select class="fi" name="store"><option>Bar WAVY 蒲田店</option><option>1000円 Bar 3rd(蒲田)</option><option>Bar A Day 川崎店</option><option>Bar NOCT 大森店</option><option>相談して決めたい</option></select></label>
+    <div style="display:flex;gap:10px">
+      <label class="fl" style="flex:1.4">ご利用日<input class="fi" type="date" name="date" required></label>
+      <label class="fl" style="flex:1">開始時間<input class="fi" type="text" name="time" required maxlength="12" placeholder="20:00ごろ"></label>
+    </div>
+    <label class="fl">人数<input class="fi" type="number" name="num" min="1" max="99" required placeholder="8"></label>
+    <label class="fl">お名前<input class="fi" type="text" name="name" required maxlength="40"></label>
+    <label class="fl">電話番号(確認のお電話をします)<input class="fi" type="tel" name="tel" required maxlength="20" placeholder="090-0000-0000"></label>
+    <label class="fl">ご要望など(空欄でOK)<textarea class="fi" name="msg" rows="2" maxlength="300" placeholder="誕生日サプライズをしたい / 予算の相談 など"></textarea></label>
+    <button class="btn primary" type="submit" style="width:100%;border:0;cursor:pointer;font-size:16px">送信する</button>
+  </form>
+  <div id="rsv_done" style="display:none;text-align:center;padding:18px 0"><b>受付しました!</b><br>お店から確認のお電話をいたします。</div>
+  <iframe name="rsv_frame" style="display:none"></iframe>
+</div></section>
+<script>document.getElementById('rsvf').addEventListener('submit',function(){var f=this;setTimeout(function(){f.style.display='none';document.getElementById('rsv_done').style.display='block';},400);});</script>
+
+<section class="wrap"><h2>お急ぎの場合は電話で</h2><div class="rsv">
+  <div class="t">営業時間中は電話が早いです</div>
+  <div class="hours"><div class="row"><span class="d">Bar WAVY 蒲田店(蒲田)</span><span class="t"><a href="tel:03-6424-9459">03-6424-9459</a></span></div><div class="row"><span class="d">1000円 Bar 3rd(蒲田)</span><span class="t"><a href="tel:03-6428-6737">03-6428-6737</a></span></div><div class="row"><span class="d">Bar A Day 川崎店(川崎)</span><span class="t"><a href="tel:044-244-6554">044-244-6554</a></span></div><div class="row"><span class="d">Bar NOCT 大森店(大森)</span><span class="t"><a href="tel:03-6450-0081">03-6450-0081</a></span></div></div>
+  <div class="small">営業時間外はWebフォームからどうぞ(折り返します)</div>
+</div></section>
+<footer class="wrap"><p>運営会社: 株式会社WAVY</p></footer>
+</body>
+</html>
