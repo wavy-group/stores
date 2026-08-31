@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wavy-group.github.io/stores/sitemap.xml
