@@ -28,8 +28,8 @@ a{color:inherit;text-decoration:none}
 h1{font-size:38px;font-weight:900;line-height:1.25;color:#FFF}
 h1 .neon{color:#FF5CA8;text-shadow:0 0 6px #FF5CA8,0 0 18px #FF5CA866,0 0 42px #FF5CA833}
 .sub{margin-top:10px;font-size:13.5px;color:#D9C8B0}
-.badge{position:absolute;top:18px;right:16px;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#FFD98A,#FFAD3B);color:#3A1D00;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;transform:rotate(8deg);box-shadow:0 6px 20px rgba(255,173,59,.35);z-index:2}
-.badge b{font-size:17px}.badge span{font-size:10px}
+.badge{position:absolute;top:18px;right:16px;width:104px;height:104px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#FFD98A,#FFAD3B);color:#3A1D00;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;transform:rotate(8deg);box-shadow:0 6px 20px rgba(255,173,59,.35);z-index:2}
+.badge b{font-size:15px}.badge span{font-size:9.5px}
 .cta{display:flex;gap:10px;margin-top:16px;max-width:520px}
 .cta a{flex:1;text-align:center;padding:14px 6px;border-radius:12px;font-weight:900;font-size:14px}
 .c1{background:linear-gradient(135deg,#FFB84D,#FF8E2B);color:#2A1500}
@@ -44,9 +44,16 @@ h1 .neon{color:#FF5CA8;text-shadow:0 0 6px #FF5CA8,0 0 18px #FF5CA866,0 0 42px #
 .card img{width:100%;height:170px;object-fit:cover;filter:brightness(.85);display:block}
 .cb{padding:14px 16px 16px}
 .area{font-size:10.5px;letter-spacing:.25em;color:#FFB25C;font-weight:700}
+.op{font-size:10px;letter-spacing:0;font-weight:900;margin-left:6px}
+.op.on{color:#5CE8A0}.op.off{color:#8A755C}
 .nm{font-size:19px;font-weight:900;color:#FFF;margin:2px 0}
 .ds{font-size:12.5px;color:#C9B499}
 .tag{position:absolute;top:12px;left:12px;background:#0B0806CC;border:1px solid #FF5CA8;color:#FF5CA8;font-size:11px;font-weight:700;padding:4px 10px;border-radius:99px;backdrop-filter:blur(4px)}
+.quote{margin:22px 0 4px;padding:14px 16px;border-left:3px solid #FF5CA8;background:#161009;border-radius:0 12px 12px 0;font-size:13px;color:#E5D8C4}
+.quote span{display:block;font-size:11px;color:#A08A6C;margin-top:5px}
+.tels{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding-bottom:4px}
+.tels a{text-align:center;padding:11px 4px;border:1.5px solid #FFB84D;border-radius:12px;color:#FFB84D;font-size:11px;font-weight:700}
+.tels a b{display:block;font-size:13.5px}
 .party{display:block;border-radius:18px;padding:22px 18px;margin:26px 0 8px;text-align:center;background:linear-gradient(135deg,#FFB84D,#FFD98A);color:#2A1500}
 .party .pk{font-size:11px;letter-spacing:.25em;font-weight:900;color:#7A4300}
 .party .pt{font-size:19px;font-weight:900;margin-top:3px}
@@ -60,7 +67,7 @@ footer a{color:#C9AF8B}
   h1{font-size:56px}
   .sub{font-size:16px}
   .badge{width:130px;height:130px;top:30px;right:40px}
-  .badge b{font-size:24px}.badge span{font-size:12px}
+  .badge b{font-size:21px}.badge span{font-size:12px}
   .cards{grid-template-columns:1fr 1fr}
   .card img{height:210px}
   .links{column-count:2;column-gap:40px}
@@ -75,7 +82,7 @@ footer a{color:#C9AF8B}
 <div class="hero">
   <img src="aday/img/02.jpg" alt="店内">
   <div class="ov"></div>
-  <div class="badge"><span>飲み放題込み</span><b>¥690〜</b><span>30分</span></div>
+  <div class="badge"><span>飲み放題込み/30分</span><b>女性¥390〜</b><span style="font-size:11px;font-weight:900">男性¥690〜</span></div>
   <div class="tx">
     <div class="kicker">KAMATA / KAWASAKI / OMORI</div>
     <h1>今夜、<span class="neon">朝まで</span><br>歌える店がある。</h1>
@@ -88,17 +95,25 @@ footer a{color:#C9AF8B}
   <div class="sec" id="stores">STORES | 店舗をえらぶ</div>
   <div class="cards">
     <a class="card" href="wavy/"><span class="tag">朝まで</span><img src="wavy/img/03.jpg" alt="Bar WAVY 蒲田店 店内">
-      <div class="cb"><div class="area">KAMATA WEST</div><div class="nm">Bar WAVY 蒲田店</div>
+      <div class="cb"><div class="area">KAMATA WEST <span class="op" data-o="1260" data-fo="1350" data-c="480"></span></div><div class="nm">Bar WAVY 蒲田店</div>
       <div class="ds">蒲田西口・朝まで歌えるカラオケバー</div></div></a>
     <a class="card" href="3rd/"><span class="tag">1時間¥1,000</span><img src="3rd/img/03.jpg" alt="1000円バー 3rd 店内">
-      <div class="cb"><div class="area">KAMATA EAST</div><div class="nm">1000円 Bar 3rd</div>
+      <div class="cb"><div class="area">KAMATA EAST <span class="op" data-o="1200" data-fo="1200" data-c="480"></span></div><div class="nm">1000円 Bar 3rd</div>
       <div class="ds">蒲田駅東口 徒歩1分・明朗会計の飲み放題バー</div></div></a>
     <a class="card" href="aday/"><span class="tag">30分¥690〜</span><img src="aday/img/02.jpg" alt="Bar A Day 川崎店 店内">
-      <div class="cb"><div class="area">KAWASAKI</div><div class="nm">Bar A Day 川崎店</div>
+      <div class="cb"><div class="area">KAWASAKI <span class="op" data-o="1200" data-fo="1200" data-c="480"></span></div><div class="nm">Bar A Day 川崎店</div>
       <div class="ds">川崎駅東口・朝まで遊べる懐かしBar</div></div></a>
     <a class="card" href="noct/"><span class="tag">無制限¥3,300</span><img src="noct/img/09.jpg" alt="Bar NOCT 大森店 店内">
-      <div class="cb"><div class="area">OMORI</div><div class="nm">Bar NOCT 大森店</div>
+      <div class="cb"><div class="area">OMORI <span class="op" data-o="1140" data-fo="1140" data-c="180"></span></div><div class="nm">Bar NOCT 大森店</div>
       <div class="ds">大森駅東口・時間無制限で歌って飲める深夜バー</div></div></a>
+  </div>
+  <div class="quote">「飲み放題で料金も安く、カラオケやダーツも沢山あるので20時から8時までずっと楽しめます」<span>— Googleクチコミより(<a href="voices/" style="color:#FFB84D">お客様の声を見る</a>)</span></div>
+  <div class="sec">TEL | 今夜の予約・お問い合わせ</div>
+  <div class="tels">
+    <a href="tel:0364249459"><b>WAVY</b>蒲田</a>
+    <a href="tel:0364286737"><b>3rd</b>蒲田</a>
+    <a href="tel:0442446554"><b>A Day</b>川崎</a>
+    <a href="tel:0364500081"><b>NOCT</b>大森</a>
   </div>
   <a class="party" href="party/">
     <div class="pk">PARTY</div>
@@ -113,5 +128,30 @@ footer a{color:#C9AF8B}
   </div>
   <footer>運営: <a href="company/">株式会社WAVY(会社概要)</a><br>© KARAOKE BAR GROUP</footer>
 </div>
+<script>
+(function(){
+  var n = new Date();
+  var mins = n.getHours() * 60 + n.getMinutes();
+  var day = n.getDay();
+  var late = (day === 5 || day === 6); // 金・土は遅いオープン側を使う(WAVY)
+  document.querySelectorAll('.op').forEach(function(el){
+    var o = parseInt(late ? el.getAttribute('data-fo') : el.getAttribute('data-o'), 10);
+    var c = parseInt(el.getAttribute('data-c'), 10);
+    var open = (mins >= o) || (mins < c);
+    el.textContent = open ? '● 営業中' : ('OPEN ' + Math.floor(o / 60) + ':' + ('0' + (o % 60)).slice(-2));
+    el.className = 'op ' + (open ? 'on' : 'off');
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.style.opacity = 1; e.target.style.transform = 'none'; io.unobserve(e.target); } });
+    }, { threshold: .15 });
+    document.querySelectorAll('.card,.party,.quote').forEach(function(el){
+      el.style.opacity = 0; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      io.observe(el);
+    });
+  }
+})();
+</script>
 </body>
 </html>
